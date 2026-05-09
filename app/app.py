@@ -20,7 +20,11 @@ def check_password():
     st.title("パソコン教室")
     pw = st.text_input("パスワードを入力してください", type="password")
     if pw:
-        if pw == st.secrets.get("password", ""):
+        try:
+            correct = st.secrets["password"]
+        except Exception:
+            correct = ""
+        if pw == correct:
             st.session_state.authenticated = True
             st.rerun()
         else:
