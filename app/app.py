@@ -8,6 +8,24 @@ from google.oauth2.service_account import Credentials
 import streamlit.components.v1 as components
 
 APP_DIR = Path(__file__).resolve().parent
+
+
+def check_password():
+    if "authenticated" not in st.session_state:
+        st.session_state.authenticated = False
+
+    if st.session_state.authenticated:
+        return True
+
+    st.title("パソコン教室")
+    pw = st.text_input("パスワードを入力してください", type="password")
+    if pw:
+        if pw == st.secrets.get("password", ""):
+            st.session_state.authenticated = True
+            st.rerun()
+        else:
+            st.error("パスワードが違います")
+    st.stop()
 LESSONS_DIR = APP_DIR.parent / "lessons"
 QUIZ_DATA_DIR = APP_DIR / "quiz_data"
 
@@ -69,6 +87,7 @@ def render_lesson(content: str):
 # ---- App ----
 
 st.set_page_config(page_title="パソコン教室", layout="wide")
+check_password()
 st.title("パソコン教室")
 
 sessions = sorted([f.stem for f in LESSONS_DIR.glob("*.md")], reverse=True)
