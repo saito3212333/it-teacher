@@ -1,0 +1,60 @@
+questions:
+  - id: 1
+    question: "1バイトは何ビットですか？"
+    options:
+      A: "4ビット"
+      B: "8ビット"
+      C: "16ビット"
+      D: "1,024ビット"
+    answer: "B"
+    explanation: "0か1を入れる部屋が8個集まると1バイトになります。"
+
+  - id: 2
+    question: "データの単位を小さい順に並べたものはどれですか？"
+    options:
+      A: "TB → GB → MB → KB"
+      B: "KB → MB → GB → TB"
+      C: "MB → KB → GB → TB"
+      D: "GB → TB → KB → MB"
+    answer: "B"
+    explanation: "KB → MB → GB → TB の順に大きくなります。"
+
+  - id: 3
+    question: "CドライブのCはなぜCなのですか？"
+    options:
+      A: "Computer（コンピュータ）の頭文字だから"
+      B: "Core（コア）の頭文字だから"
+      C: "フロッピーディスクがAとBを使っていたから"
+      D: "特に意味はない"
+    answer: "C"
+    explanation: "昔の装置がAとBに割り当てられていたため、次の装置がCになりました。"
+
+  - id: 4
+    question: "CPUの役割はどれですか？"
+    options:
+      A: "データを長期間保存する"
+      B: "計算・処理をする"
+      C: "インターネットにつなぐ"
+      D: "一時的に作業する場所を提供する"
+    answer: "B"
+    explanation: "メモリが「作業場」、ストレージが「保存場所」です。"
+
+  - id: 5
+    question: "「クラウド」の裏にあるものは何ですか？"
+    options:
+      A: "魔法のような仮想空間"
+      B: "物理的なサーバーが集まったデータセンター"
+      C: "衛星"
+      D: "あなたのPC"
+    answer: "B"
+    explanation: "クラウドは実体がないように見えますが、必ず物理的なサーバーが存在します。"
+
+  - id: 6
+    question: "Windowsの設定が見つからないとき、最初にやることは？"
+    options:
+      A: "詳しい人に電話する"
+      B: "パソコンを再起動する"
+      C: "検索バーにキーワードを入れてみる"
+      D: "あきらめる"
+    answer: "C"
+    explanation: "検索バーに「update」や「バージョン」などのキーワードを入れると候補が出てきます。"
